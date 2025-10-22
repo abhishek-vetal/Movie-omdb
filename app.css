@@ -1,0 +1,261 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root {
+  --bg-dark: #121212;
+  --bg-light: #2e2e2f;
+  --bg-button: #4b4b4b;
+  --text-white: #ffffff;
+  --text-gray: #a5a5a5;
+  --text-muted: #8a8a8a;
+  --accent: #6d6c6c;
+
+  --radius-sm: 3px;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+}
+
+/* BASE */
+body {
+  min-height: 100vh;
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--text-white);
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: color 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--accent);
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  border: none;
+}
+
+button:hover,
+button:focus {
+  transform: scale(1.1);
+  outline: none;
+}
+
+/* HEADER */
+header {
+  position: relative;
+}
+
+.header-container {
+  height: 12.5rem;
+  background-image: url("images/header-image.png");
+  background-size: cover;
+  background-position: left top 20%;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  padding: 0 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -20px;
+  width: 90%;
+}
+
+.search-input-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-light);
+  padding: 0.2rem 1rem;
+  gap: 1rem;
+  border-top-left-radius: var(--radius-sm);
+  border-bottom-left-radius: var(--radius-sm);
+}
+
+input {
+  width: 100%;
+  appearance: none;
+  border: none;
+  color: var(--text-gray);
+  background: transparent;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: var(--spacing-sm);
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: var(--text-white);
+  box-shadow: 0 0 0px 1000px var(--bg-light) inset;
+  caret-color: var(--text-white);
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input:focus {
+  outline: none;
+}
+
+.search-btn {
+  padding: 0.5rem 2rem;
+  color: var(--text-white);
+  background-color: var(--bg-button);
+  border-top-right-radius: var(--radius-sm);
+  border-bottom-right-radius: var(--radius-sm);
+}
+
+/* MAIN */
+main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.failed-search-heading,
+.watchlist-heading {
+  font-size: 1.2rem;
+  color: var(--accent);
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.main-paragraph {
+  color: var(--bg-light);
+  margin-top: -2.5rem;
+}
+
+.movies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 2.5rem var(--spacing-lg);
+  gap: 1rem;
+  border-bottom: 1px solid #2d2d2d;
+}
+
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.poster {
+  width: 12.5rem;
+  flex-shrink: 0;
+}
+
+.poster-img {
+  width: 100%;
+}
+
+.first-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.second-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.watchlist,
+.watchlist-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+}
+
+.rating {
+  min-width: 4rem;
+}
+
+/* RESPONSIVE */
+@media (min-width: 750px) {
+  body {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  a {
+    font-size: 1rem;
+  }
+
+  .header-container {
+    padding: 0 3rem;
+  }
+
+  form {
+    width: 80%;
+  }
+
+  .poster {
+    width: 20%;
+  }
+
+  .movies {
+    width: 100%;
+    flex-direction: row;
+    gap: 1.2rem;
+  }
+
+  .movie-info {
+    flex-grow: 1;
+  }
+
+  .first-container {
+    margin-bottom: 1.5rem;
+  }
+
+  .second-container {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="app.css">
+    <title>Movies</title>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1 class="header-heading">Find Your Film</h1>
+            <a href="watchlist.html">My Watchlist</a>
+        </div>
+        <form id="form">
+            <div class="search-input-container">
+                <img src="images/icon-1.png" alt="search icon.">
+                <input 
+                id="movie-search" 
+                type="search" 
+                name="movie-search"
+                placeholder="Blade Runner" 
+                required /> 
+            </div>
+            <button class="search-btn" type="submit">Search</button>
+        </form>
+    </header>
+
+
+    <main id="main">
+        <div id="main-container" class="main-container">
+            <img class="movie-icon" src="images/Icon.png" alt="background icon to show the movies will be here.">
+            <p class="main-paragraph">Start exploring</p>
+        </div>
+    </main>
+    
+    
+    <script src="script.js" type="module"></script>
+</body>
+</html>
